@@ -12,49 +12,49 @@
 <body>
     <main>
         <section>
-            <div class="bgSignUp w-full m-auto flex flex-col items-center justify-center h-screen">
-                <div class="max-w-[450px] w-full m-auto bg-white/90 rounded-xl px-5 py-10">
-                    <form action="" id="formSignUp">
+            <div class="bgSignUp w-full m-auto flex flex-col items-center justify-center h-screen px-5">
+                <div class="max-w-[650px] w-full m-auto bg-white/90 rounded-xl px-5 py-10">
+                    <form action="./signin.html" id="formSignUp">
                         <div class="p-5">
                             <div class="flex flex-col gap-2">
                                 <label for="txtName">Name</label>
                                 <input type="text" name="txtName" id="txtName"
-                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2">
-                                <span class="errorMsg" id="errorName"></span>
+                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2" />
+                                <span class="text-red-600 mb-5" id="errorName"></span>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="txtEmail">Email</label>
                                 <input type="text" name="txtEmail" id="txtEmail"
-                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2">
-                                <span class="errorMsg" id="errorEmail"></span>
+                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2" />
+                                <span class="text-red-600 mb-5" id="errorEmail"></span>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="txtPhone">Phone</label>
-                                <input type="text" name="txtPhone" id="txtPhone"
-                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2">
-                                <span class="errorMsg" id="errorPhone"></span>
+                                <input type="number" name="txtPhone" id="txtPhone"
+                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2" />
+                                <span class="text-red-600 mb-5" id="errorPhone"></span>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="txtLocation">Location / City</label>
                                 <input type="text" name="txtLocation" id="txtLocation"
-                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2">
-                                <span class="errorMsg" id="errorLocation"></span>
+                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2" />
+                                <span class="text-red-600 mb-5" id="errorLocation"></span>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="txtPassword">Password</label>
-                                <input type="text" name="txtPassword" id="txtPassword"
-                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2">
-                                <span class="errorMsg" id="errorPassword"></span>
+                                <input type="password" name="txtPassword" id="txtPassword"
+                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2" />
+                                <span class="text-red-600 mb-5" id="errorPassword"></span>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="txtConPassword">Confirm Password</label>
-                                <input type="text" name="txtConPassword" id="txtConPassword"
-                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2">
-                                <span class="errorMsg" id="errorConPwd"></span>
+                                <input type="password" name="txtConPassword" id="txtConPassword"
+                                    class="border-[1px] border-gray-300 outline-gray-200 rounded-md p-2" />
+                                <span class="text-red-600 mb-5" id="errorConPwd"></span>
                             </div>
                             <div class="flex justify-center mt-5 gap-2">
                                 <button class="p-3 w-1/2 bg-blue-500 hover:bg-blue-600 text-white rounded-full cursor-pointer"
-                                    type="button">Sign Up</button>
+                                    type="submit">Sign Up</button>
                             </div>
                         </div>
                     </form>
@@ -62,6 +62,7 @@
             </div>
         </section>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
