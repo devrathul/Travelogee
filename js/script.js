@@ -24,7 +24,7 @@ let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/
 let userList = [];
 
 if (formSignUpEl) {
-    formSignUpEl.addEventListener('submit', (event) => {
+    formSignUpEl.addEventListener('submit', async (event) => {
         event.preventDefault();
         let isFormValid = true;
         let val = "";
@@ -103,8 +103,9 @@ if (formSignUpEl) {
                 password: password_El.value.trim()
             };
 
-            const isUserAdded = register_user(user);
-            if (isUserAdded) {
+            const isUserAdded = await register_user(user);
+
+            if (isUserAdded === true) {
                 window.location.href = "signin.html";
             }
         }
@@ -125,7 +126,6 @@ if (formSignInEl) {
         }else{
             window.location.href = "home.html";
         }
-
     });
 }
 
@@ -140,10 +140,13 @@ let register_user = async (user) => {
             },
             body: JSON.stringify(user)
         });
-        if (response.ok) {
+
+        if (response.ok) {           
             return true;
+        }else{
+            return false;
         }
-        return [];
+        
     } catch (error) {
         console.error("Error:", error);
     }

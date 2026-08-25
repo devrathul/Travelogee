@@ -3,3 +3,9 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+
+.herosectionBg{
+    background-image: url(../images/bannerBg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
